@@ -208,7 +208,7 @@
       const heart = document.createElement('div');
 
       heart.style.userSelect = "none";
-      heart.style.pointerEvents = "none";
+      heart.style.pointerEvents = "none";      
 
       heart.className = 'heart';
       heart.textContent = '❤';
