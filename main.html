@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Countdown!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #F2D9D9;
+        }
+        .countdown {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #F2BAC8;
+            border-radius: 10px;
+            background: #fff;
+        }
+        .time {
+            font-size: 2em;
+            margin-top: 10px;
+        }
+        .special-message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #007b00;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <h1>Anniversary Countdown!</h1>
+        <div id="time" class="time"></div>
+        <div id="message" class="special-message"></div>
+    </div>
+
+    <script src="./oneko.js"></script>
+    
+    <script>
+        function updateCountdown() {
+            const now = new Date();
+            const targetDay = 9;
+            let nextTarget = new Date(now.getFullYear(), now.getMonth(), targetDay);
+
+            if (now.getDate() > targetDay) {
+                nextTarget.setMonth(nextTarget.getMonth() + 1);
+            }
+
+            const diff = nextTarget - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            const timeElement = document.getElementById('time');
+            const messageElement = document.getElementById('message');
+
+            if (now.getDate() === targetDay) {
+                timeElement.innerText = "It's our Anniversary!";
+                messageElement.innerText = "Happy Anniversary Bebi! I love you!";
+            } else {
+                timeElement.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                messageElement.innerText = "";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
