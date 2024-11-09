@@ -210,7 +210,6 @@
       heart.style.userSelect = "none";
       heart.style.pointerEvents = "none";
 
-
       heart.className = 'heart';
       heart.textContent = '❤';
       const offsetX = (Math.random() - 0.5) * 50;
