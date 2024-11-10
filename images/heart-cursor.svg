@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<svg width="32" height="32" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<defs>
+  <style type="text/css">
+    <![CDATA[
+      .outline { stroke:none; stroke-width:0 }
+    ]]>
+  </style>
+  <g id="heart"><path d="m0,200l0,-200l200,0a100,100 90 0 1 0,200a100,100 90 0 1 -200,0z" id="svg_1"/></g>
+</defs>
+<g class="layer">
+  <title>Layer 1</title>
+    <use class="outline" fill="white" id="svg_2" transform="translate(127.858, 127.858) scale(0.998265) translate(-127.858, -127.858) matrix(0.425813, 0, 0, 0.425813, 0.00296109, 0.00296109)" xlink:href="#heart"/>
+  </g>
+</svg>

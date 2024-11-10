@@ -1,0 +1,40 @@
+.custom-cursor {
+    cursor: url(images/heart-cursor.svg) 0 0, auto;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #F2D9D9;
+}
+.countdown {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #F2BAC8;
+    border-radius: 10px;
+    background: #fff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.time {
+    font-size: 2em;
+    margin-top: 10px;
+}
+.special-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #007b00;
+}
+
+svg {
+    shape-rendering: crispEdges;
+  }
+  
