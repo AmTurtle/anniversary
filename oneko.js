@@ -2,8 +2,8 @@
 
 (function oneko() {
   const isReducedMotion =
-    window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
-    window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+    window.matchMedia(`(prefers-reduced-motion: reduce)`) === false ||
+    window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === false;
 
   if (isReducedMotion) return;
 
