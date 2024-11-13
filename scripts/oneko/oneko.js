@@ -2,8 +2,8 @@
 
 (function oneko() {
   const isReducedMotion =
-    window.matchMedia(`(prefers-reduced-motion: reduce)`) === false ||
-    window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === false;
+    window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
+    window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 
   if (isReducedMotion) return;
 
@@ -96,7 +96,7 @@
     nekoEl.style.top = `${nekoPosY - 16}px`;
     nekoEl.style.zIndex = Number.MAX_VALUE;
 
-    let nekoFile = "./oneko.gif"
+    let nekoFile = "./scripts/oneko/oneko.gif"
     const curScript = document.currentScript
     if (curScript && curScript.dataset.cat) {
       nekoFile = curScript.dataset.cat
