@@ -1,10 +1,14 @@
 function updateCountdown() {
       const now = new Date();
-      const targetDay = 13; // 9
-      let nextTarget = new Date(now.getFullYear(), now.getMonth(), targetDay);
+      
+      const annivDay = 9; // 9
+      const annivMonth = 3; // 3
+      const annivYear = 2024 // 2024
+      
+      let nextTarget = new Date(now.getFullYear(), now.getMonth(), annivDay);
   
       // if today is past the target day move to the next month
-      if (now.getDate() > targetDay) {
+      if (now.getDate() > annivDay) {
           nextTarget.setMonth(nextTarget.getMonth() + 1);
       }
   
@@ -18,15 +22,15 @@ function updateCountdown() {
       const messageElement = document.getElementById('message');
   
       // calculate the number of months since a specific start date
-      const startDate = new Date(2024, 3, targetDay);
+      const startDate = new Date(annivYear, annivMonth, annivDay);
   
       let monthsDifference = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
-      if (now.getDate() < targetDay) {
+      if (now.getDate() < annivDay) {
           monthsDifference--;
       }
   
       // display message
-      if (now.getDate() === targetDay) {
+      if (now.getDate() === annivDay) {
           timeElement.innerText = "It's our Anniversary!";
           messageElement.innerText = `Happy Anniversary Bebi! We've been together for ${monthsDifference + 1} months! I love you!`;
       } else {
