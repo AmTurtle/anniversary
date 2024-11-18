@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>🤍Anniversary Countdown</title>
 </head>
@@ -10,8 +11,10 @@
 <div id="modal" class="modal">
     <div class="modal-content">
         <span id="close-btn" class="close-btn">&times;</span>
-        <h2>Anniversary Details</h2>
-        <p>placeholder stuff text and all that litterwy</p>
+        <h2>Milestones</h2>
+        <div id="milestone-list" class="milestone-list">
+            <!-- Milestones will be added here dynamically -->
+        </div>
     </div>
 </div>
 
@@ -22,6 +25,7 @@
         <div id="message" class="special-message"></div>
     </div>
 
+    
     <script src="./scripts/oneko/oneko.js"></script>
     <script src="./scripts/detailsModal.js"></script>
     <script src="./scripts/updateCountdown.js"></script>

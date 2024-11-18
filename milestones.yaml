@@ -1,0 +1,17 @@
+# Our Journey Together
+# Format: YYYY-MM-DD for dates
+
+milestones:
+  - text: "The Beginning"
+    date: 2024-03-09
+    description: "Day 1"
+
+  - text: "Half of a Year"
+    date: 2024-06-09
+    description: "It's been half of a year"
+
+# Add more milestones below this line
+# Example format:
+#  - text: "Your milestone"
+#    date: YYYY-MM-DD
+#    description: "Your description"
