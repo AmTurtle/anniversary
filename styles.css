@@ -63,6 +63,7 @@ svg {
     text-align: center;
     width: 80%;
     max-width: 500px;
+    border: 2px solid #F2BAC8;
 }
 
 .close-btn {
@@ -81,6 +82,26 @@ svg {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #fff #fff;
+}
+
+.milestone-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.milestone-list::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 4px;
+}
+
+.milestone-list::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 4px;
+}
+
+.milestone-list::-webkit-scrollbar-thumb:hover {
+    background: #fff;
 }
 
 .milestone-item {
@@ -131,4 +152,28 @@ svg {
     text-align: center;
     padding: 20px;
     font-style: italic;
+}
+
+.milestone-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.completion-status {
+    font-size: 1.3em;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.completion-status.completed i {
+    color: #F2BAC8;
+    filter: drop-shadow(0 0 0.5px #F2BAC8);
+}
+
+.completion-status.pending i {
+    color: #F2BAC8;
+    filter: drop-shadow(0 0 0.5px #F2BAC8);
 }

@@ -113,6 +113,11 @@ function handleMilestonesError(error) {
 
 // date formatting
 function formatDateEST(dateInput) {
+    // Special handling for TBD dates
+    if (dateInput === 'TBD') {
+        return 'TBD';
+    }
+
     try {
         let date;
         
@@ -146,13 +151,20 @@ function formatDateEST(dateInput) {
 // milestone element creation
 function createMilestoneElement(milestone) {
     const div = document.createElement('div');
-    div.className = 'milestone-item';
+    div.className = `milestone-item ${milestone.completed ? 'completed' : 'pending'}`;
     
     const dateStr = formatDateEST(milestone.date);
     
     div.innerHTML = `
         <div class="milestone-content">
-            <span class="milestone-text">${milestone.text}</span>
+            <div class="milestone-header">
+                <span class="milestone-text">${milestone.text}</span>
+                <span class="completion-status ${milestone.completed ? 'completed' : 'pending'}">
+                    ${milestone.completed ? 
+                        '<i class="fa-solid fa-heart"></i>' : 
+                        '<i class="fa-solid fa-clock"></i>'}
+                </span>
+            </div>
             <span class="milestone-date">${dateStr}</span>
             ${milestone.description ? 
                 `<span class="milestone-description">${milestone.description}</span>` 

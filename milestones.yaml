@@ -2,16 +2,39 @@
 # Format: YYYY-MM-DD for dates
 
 milestones:
-  - text: "The Beginning"
+  - text: "The Beginning!"
     date: 2024-03-09
-    description: "Day 1"
+    description: "Day 1!"
+    completed: true
 
-  - text: "Half of a Year"
+  - text: "Half a Year!"
     date: 2024-06-09
-    description: "It's been half of a year"
+    description: "It's been half a year!"
+    completed: true
+
+  - text: "A Full Year!"
+    date: 2025-03-09
+    description: "It's been a full year!"
+    completed: false
+
+  - text: "First Meetup!"
+    date: TBD
+    description: "We met in person!"
+    completed: false
+
+  - text: "We're Engaged!"
+    date: TBD
+    description: "We got engaged!"
+    completed: false
+  
+  - text: "We're Married!"
+    date: TBD
+    description: "We got married!"
+    completed: false
 
 # Add more milestones below this line
 # Example format:
 #  - text: "Your milestone"
 #    date: YYYY-MM-DD
 #    description: "Your description"
+#    completed: false
